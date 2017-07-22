@@ -46,11 +46,16 @@ const renderSingle = (file) => {
 			parts.shift();
 
 		// if in views/pages/ remove views and pages from path
-		if ( parts.length > 1 ) {
+		if ( parts.length == 2 ) {
+			// home page
 			parts.splice(0, 1); // flatten path
+		} else if ( parts.length > 2 ) {
+			// pages dir
+			parts.splice(0, 3); // flatten path
 		}
 
 		file = parts.join('/');
+
 
 		let dest = config.destPaths.root + '/' + file;
 

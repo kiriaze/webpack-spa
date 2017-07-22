@@ -28,8 +28,7 @@ const config = {
 		// ],
 
 		// // Multiple files, multiple outputs (multi page app)
-		main: './assets/js/app.js',
-		about: './views/pages/about.js',
+		main: './assets/js/app.js'
 		
 	},
 	output: {

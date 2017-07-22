@@ -29,8 +29,7 @@ const config = {
 		// ],
 
 		// multi page app - separate files
-		'main': './assets/js/app.js',
-		'about': './views/pages/about.js',
+		'main': './assets/js/app.js'
 	},
 	output: {
 		path: path.resolve(__dirname, baseConfig.destPaths.root),

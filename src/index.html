@@ -1,26 +1,13 @@
-{% extends 'base.twig' %}
+{% extends './views/templates/base.twig' %}
 
 {% block content %}
 	
-	<!-- testing twig -->
-	{% include './views/partials/header.twig' %}
+	{% include './views/globals/header/template.twig' %}
 
-	{% include './views/modules/heroes/hero/template.twig' %}
-
-	<h1>{{ pageTitle }}</h1>
-
-	<a href="pages/about.html">about link</a>
-
-	<!-- <img src="/assets/images/slack-imgs.jpg"> -->
+	{# {% include './views/modules/heroes/hero/template.twig' %} #}
 	
-	<pre>{{data | json_encode}} </pre>
-
-	<pre>{{data['test']['title']}}</pre>
-
-	<ul>
-		{% for client in data['test']['clients'] %}
-			<li>{{ client }}</li>
-		{% endfor %}
-	</ul>
+	<div class="app">
+		<h2>home page</h2>
+	</div>
 
 {% endblock %}

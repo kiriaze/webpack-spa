@@ -1,13 +1,3 @@
-$bluegrey: #2B3A42;
-
-body {
-	background: beige;
-	// background: beige url('/assets/images/slack-imgs.jpg');
-}
-
-pre {
-	padding: 20px;
-	color: #dedede;
-	background: $bluegrey;
-	text-shadow: 0 1px 1px rgba(#000, .5);
-}
+@import './mixins/style';
+@import './global/style';
+@import './patterns/style';
