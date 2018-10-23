@@ -34,6 +34,7 @@ $(document).on('click', 'a', (e) => {
 
 Router.route('/', (e) => {
 	console.log('home');
+	Router.navigate('index');
 });
 
 Router.route('/$slug', (slug) => {
