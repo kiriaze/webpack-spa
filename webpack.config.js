@@ -114,7 +114,7 @@ const config = {
 		// e.g. 10.0.0.1:3000
 		host: '0.0.0.0',
 		disableHostCheck: true,
-
+		headers: { "Access-Control-Allow-Origin": "*" },
 		historyApiFallback: true // history api
 	},
 	plugins: [

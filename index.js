@@ -9,10 +9,19 @@ const data = {};
 const renderData = () => {
 
 	glob(config.srcPaths.data.all, (err, files) => {
-		files.forEach((file) => {
-			data['test'] = JSON.parse(fs.readFileSync( file ));
+		files.forEach((filePath) => {
+			let file     = filePath.split('/').pop(),
+				fileName = file.slice(0, -5);
+			// console.log(fileName);
+			data[fileName] = JSON.parse(fs.readFileSync( filePath ));
 		});
 	});
+
+	data.env       = process.env.NODE_ENV;
+	data.assetPath = config.assetPath;
+	data.portPath  = data.assetPath; // local/prod dual ports, can be set to assetPath for prod
+	data.timestamp = Date.now();
+
 	return data;
 
 };

@@ -15,6 +15,8 @@
 
 Js for twig templates, compiles to html, copies over php files but primarily is for spa/mpa's that are simple.
 
+Note: When building/deploying, exit dev mode. After deploying, restart dev mode. `npm start`
+
 ---
 
 ## License

@@ -6,7 +6,9 @@
 		<title>Webpack Ish</title>
 		
 		{% block head %}
-			<link rel="stylesheet" href="./assets/css/main.bundle.css">
+			{% if data['env'] == 'production' %}
+			<link rel="stylesheet" href="./assets/css/main.bundle.css?{{ data.timestamp }}">
+			{% endif %}
 		{% endblock %}
 
 	</head>
@@ -22,8 +24,8 @@
 
 		{% block foot %}
 
-			<script src="./assets/js/common.js"></script>
-			<script src="./assets/js/main.bundle.js"></script>
+			<script src="./assets/js/common.js?{{ data.timestamp }}"></script>
+			<script src="./assets/js/main.bundle.js?{{ data.timestamp }}"></script>
 
 		{% endblock %}
 	
